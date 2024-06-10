@@ -1,0 +1,71 @@
+package org.jsp.QueuimplLikedlist;
+
+class Node
+{
+	int data;
+	Node next;
+	
+	
+	public Node(int data)
+	{
+		this.data=data;
+	}
+	
+}
+
+public class QueuimplLikedlist 
+{
+	Node head;
+	Node tail;
+	
+	@Override
+	public String toString()
+	{if(head==null)
+	{
+		return "[]";
+	}
+	String res="[";
+	Node temp=head;
+	
+	while(temp!=null)
+	{
+		res=res+temp.data;
+	}
+	res=res+"]";
+		
+		return res;
+		
+	}
+	
+	
+	public void add(int data)
+	{
+		Node newNode=new Node (data);
+		
+		if(head==null)
+		{
+			head=newNode;
+			tail =newNode;
+			return;
+		}
+		tail.next=newNode;
+		tail=newNode;
+	}
+	
+
+	public int poll()
+	{
+		if(head==null)
+		{
+			System.out.println("empty list");
+			return -1 ;
+		}
+		Node temp=head;
+		int data=temp.data;
+		head=head.next;
+		temp=null;
+		return data;
+	}
+	
+
+}

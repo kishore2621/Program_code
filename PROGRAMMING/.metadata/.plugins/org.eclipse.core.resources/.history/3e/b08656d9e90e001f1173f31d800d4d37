@@ -1,0 +1,27 @@
+package org.jsp.Linkedlist;
+
+public class User {
+
+	public static void main(String[] args) {
+
+		
+		Linkedlist l1= new Linkedlist();
+		
+		l1.add(10);
+		l1.add(20);
+		l1.add(40);
+		l1.add(4, 30);
+		System.out.println(l1.searchindex(2, 40));
+		
+//		l1.addfront(60);
+//		l1.remove(2);
+		
+		
+		System.out.println(l1);
+//		l1.removefirst();
+//		l1.removeLast();
+//		System.out.println(l1);
+//		System.out.println(l1);
+	}
+
+}

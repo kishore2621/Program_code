@@ -1,0 +1,14 @@
+package org.jsp.QueuimplLikedlist;
+
+public class User 
+{
+	public static void main(String[] args) {
+		QueuimplLikedlist s1= new QueuimplLikedlist();
+		s1.add(10);
+		s1.add(20);
+		s1.add(30);
+		s1.display();
+		s1.poll();
+	}
+
+}
