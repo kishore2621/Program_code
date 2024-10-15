@@ -1,0 +1,29 @@
+
+public class number {
+	public static boolean check(int n)
+	{
+		int res=0;
+		int temp=n;
+		while(n>0)
+		{
+			int rem=temp%10;
+			res= res+rem*rem;
+			temp = temp/10;
+		}
+		return res==1;
+		
+	}
+	public static int check2(int n)
+	{
+		while(n>9)
+		{
+			check(n);
+		}
+		return n;
+	}
+public static void main(String[] args) {
+	int n= 19;
+	System.out.println(check(n));
+	
+}
+}
